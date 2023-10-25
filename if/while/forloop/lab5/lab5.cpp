@@ -38,33 +38,11 @@ int main ()
     // display a table showing the salary and total
     // do not accept days less than one for number of days worked 
 
-    /*int salary = 1, total = 0, days, average;
-    int count = 1;
-
-    cout << "How many days did you work \n";
-    cin >> days;
-
-    while (days < 1)
-    {
-        cout << "Invalid nubmer \n";
-        cout << "How many days did you work \n";
-        cin >> days;
-    }
-
-    while (count <= days)
-    {
-        cout << "Day " << count << "\t$" << salary <<endl;
-        total = days + salary;
-        count++;
-        salary = salary *2;
-    }
-    cout <<"----------------------" <<endl;
-    cout << "Total \t$" << total <<endl;
-    return 0;*/
 
 
 
-    int nDays, day=1;
+    // using whiile loop
+    /*int nDays, day=1;
     int salary =1, total = 0, counter = 0;
 
     cout << "Enter the number of days: ";
@@ -86,7 +64,33 @@ int main ()
     }
 
     cout << "-------------------\n";
-    cout << "Total \t$" << total <<endl;
+    cout << "Total \t$" << total <<endl;*/
+
+    // using for loop
+
+    int days, total = 0, salary = 1;
+
+    cout << "Enter the number of days\n";
+    cin >> days;
+
+    while (days < 1) 
+    {
+        cout << "The number you entered must be atleast one \n";
+        cout << "Enter the number of days \n";
+        cin >> days ;
+    }
+
+    for (unsigned i = 1; i <= days; i++ )
+    {
+        cout << "Day\t"  << i << "\t$" << salary << endl;;
+        total = salary + total;
+        salary = salary * 2;
+
+    }
+    cout << "--------------------\n";
+    //int average = total / days;
+
+    cout << "Total \t" <<"$" <<total <<endl;
 
     return 0;
 }
