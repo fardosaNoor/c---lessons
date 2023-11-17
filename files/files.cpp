@@ -88,8 +88,29 @@ myfile << "Tesla\n"; //looks like cout //moniter
 myfile << "Newton\n";
 myfile << "Maxwell\n";
 myfile << "fardosa\n";
+myfile << "Newton\n";
+myfile << "Maxwell\n";
+myfile << "fardosa\n";
+
 
 myfile.close();
+
+ifstream myfile1;
+string temp;
+myfile1.open("temp/newList.txt", ios::app);
+
+if (!myfile1)
+{
+    cout << "File nor found\n";
+    return 1;
+}
+
+while (myfile1 >> temp)
+{
+    cout << temp <<endl;
+}
+
+myfile1.close();
 
 return 0;
 }
